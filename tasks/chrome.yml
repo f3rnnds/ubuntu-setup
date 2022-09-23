@@ -1,0 +1,12 @@
+- name: add chrome apt signing key
+  apt_key:
+    url: https://dl.google.com/linux/linux_signing_key.pub
+
+- name: add chrome source repository into sources list
+  apt_repository:
+    repo: deb [arch=amd64] https://dl.google.com/linux/chrome/deb stable main
+    filename: google-chrome
+
+- name: install chrome package
+  apt:
+    name: google-chrome-stable

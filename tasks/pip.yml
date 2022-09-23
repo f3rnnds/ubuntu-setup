@@ -1,0 +1,14 @@
+- name: install python package installer
+  apt:
+    name: python3-pip
+
+- name: install python packages
+  pip:
+    name:
+      - numpy
+      - pandas
+      - matplotlib
+      - scikit-image
+      - scikit-learn
+      - scipy
+      - notebook

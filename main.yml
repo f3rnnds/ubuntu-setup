@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+
+    - import_tasks: tasks/update_upgrade.yml
+    - import_tasks: tasks/packages.yml
+
+    - import_tasks: tasks/chrome.yml
+    
+    - import_tasks: tasks/code.yml
+    - import_tasks: tasks/pip.yml

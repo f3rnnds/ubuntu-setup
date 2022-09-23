@@ -1,0 +1,22 @@
+- name: install system packages
+  apt:
+    name:
+      - vim
+      - htop
+      - screen
+      - tree
+      - iotop
+      - git
+      - curl
+      - net-tools
+      - nmap
+      - traceroute
+      - apache2
+
+- name: install gimp
+  apt:
+    name: gimp
+
+- name: install inkscape
+  apt:
+    name: inkscape
