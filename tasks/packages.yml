@@ -1,12 +1,14 @@
 - name: install system packages
   apt:
     name:
+      - openssh-server
       - vim
       - htop
       - screen
       - tree
       - iotop
       - git
+      - rsync
       - curl
       - net-tools
       - nmap
@@ -20,3 +22,11 @@
 - name: install inkscape
   apt:
     name: inkscape
+
+- name: install pavucontrol
+  apt:
+    name: pavucontrol
+
+- name: install audacity
+  apt:
+    name: audacity
