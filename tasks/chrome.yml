@@ -5,7 +5,7 @@
 - name: add chrome source repository into sources list
   apt_repository:
     repo: deb [arch=amd64] https://dl.google.com/linux/chrome/deb stable main
-    filename: google-chrome
+    filename: chrome
 
 - name: install chrome package
   apt:
