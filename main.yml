@@ -13,3 +13,4 @@
     - import_tasks: tasks/code.yml
     - import_tasks: tasks/pip.yml
     - import_tasks: tasks/docker.yml
+    - import_tasks: tasks/julia.yml

@@ -1,0 +1,18 @@
+- name: install julia
+  block:
+    - name: download and unarchive julia
+      unarchive:
+        src: https://julialang-s3.julialang.org/bin/linux/x64/{{ major }}.{{ minor }}/julia-{{ major }}.{{ minor }}.{{ build }}-linux-x86_64.tar.gz
+        dest: /opt
+        remote_src: yes
+        creates: /opt/julia-{{ major }}.{{ minor }}.{{ build }}
+
+    - name: create julia binary symbolic link
+      file:
+        src: /opt/julia-{{ major }}.{{ minor }}.{{ build }}/bin/julia
+        dest: /usr/local/bin/julia
+        state: link
+  vars:
+    major: 1
+    minor: 8
+    build: 2
